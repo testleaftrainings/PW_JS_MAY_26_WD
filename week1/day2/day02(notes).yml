@@ -1,0 +1,255 @@
+📑 Agenda – Day 02 | Control Statement
+⏱ Total Duration: 2 Hours
+----------------------------------------------------------------------------
+| 	Time	    |                    Session                     | Duration |
+|-------------------|------------------------------------------|----------|
+| 7:00 PM – 8:00 PM | Variables: var, let, const               | 60 mins |
+| 8:00 PM – 8:15 PM | 💻 Breakout Session (Hands-on)           | 15 mins |
+| 8:15 PM – 8:45 PM | Control Statement (Condition)            | 30 mins |
+| 8:45 PM – 9:00 PM | Operators: Arithmetic          	        | 15 mins |
+----------------------------------------------------------------------------
+
+🚦 Visual Timeline:
+SYNCHRONOUS:
+Task1: ██████████→
+Task2:              ████████→
+Task3:                       ████████→
+Time:  Total = Sum of all tasks
+
+ASYNCHRONOUS:
+Task1: ████████→
+Task2:    ████████→
+Task3:       ████████→
+Task4: ██→
+Time:  Total ≈ Longest task
+
+📊 Comparison Table
+=================================================================================
+Aspect	      ||	  Synchronous   	  ||		Asynchronous	||
+=================================================================================
+Execution		     One at a time			Multiple in progress
+Waiting			Blocks until done		Non-blocking
+Order			Predictable (sequential)	Less predictable
+Performance		Slower for I/O			Faster for I/O
+Complexity		Simple to understand		Harder to manage
+Use case		     Simple calculations		Network/files/timers
+
+-----------------------------------------------------------------------------
+
+#####
+📋 Overview Table : Naming Standards to be followed
+=================================================================================
+Element	     ||	Convention  ||	Example	     ||		Rule			||
+=================================================================================
+📁 File Names	camelCase	          loginPage.js	All lowercase start, no spaces
+📊 Variables	camelCase	          userName	     Descriptive, starts lowercase
+🏗️ Classes	PascalCase	      LoginPage	 Starts with uppercase
+🔧 Functions	camelCase	          getUserData()	Verb + Noun pattern
+=================================================================================
+#####  https://www.programiz.com/javascript/online-compiler/
+---------------------------------------------------
+// ===== script.js =====
+// No packages/classes needed!
+
+// Global code (runs directly)
+console.log("Program starts here");
+
+// Functions (like Java methods)
+function greetUser(name) {
+    return `Hello, ${name}!`;
+}
+
+// Variables
+let userName = "Bhuvanesh";
+const pi = 3.14;
+
+// Calling functions
+greetUser(userName);
+-----------------------------------------------------------------------------
+
+📝 What is var in JavaScript?
+🎯 Quick Answer
+var is a KEYWORD used to declare variables in JavaScript.(since 1995 [JavaScript's birth])
+var → KEYWORD that TELLS JavaScript: 
+
+"Hey, I'm creating a new variable here!"   
+      ↓   
+Then you give it a NAME and optionally a VALUE
+
+🎯 Bottom Line
+var is just a keyword that says: "I'm about to create a variable!
+The actual data type comes from WHAT you store in the variable, not from var itself!
+---------------------------------------------------------------------
+📝 Why let Was Invented in ES6 (2015)
+🎯 The Short Answer
+let was invented to fix the problems and weird behaviors of var that confused developers for 20 years!
+🔍 The Problem with var (Before 2015)
+Problem 1: Can Redeclare Same Variable
+Problem 2: Variable Hoisting (Weird)
+Problem 3: No Block Scope(fuction scopped)
+Problem 4: Loop Issues
+
+✅ How let Fixes These Problems
+Fix 1: Proper Block Scope
+Fix 2: No Hoisting Weirdness
+Fix 3: No Redeclaration
+Fix 4: Loop Variables Work Correctly
+
+
+📈 The Evolution Timeline
+
+1995: var invented (only way to declare variables)
+     ↓
+1995-2015: Developers struggled with var's quirks
+     ↓
+2009: ES5 tries to fix with "use strict" (partial fix)
+     ↓
+2015: ES6 introduces let and const (real solution!)
+     ↓
+Today: let is the recommended way to declare variables
+
+
+💡 Why It Took 20 Years?
+
+==================================================================
+Reason		                ||	    Explanation  		      ||
+===================================================================
+Backward Compatibility		     Can't break existing websites!
+Standards Process		          ECMAScript updates take time
+Browser Support			     Need all browsers to implement
+Community Feedback		          Had to prove let was really needed
+===================================================================
+
+📊 ES6 Impact Summary
+		
+=================================================================================
+Before ES6	      ||	  After ES6   	  ||	 	Improvement	               ||
+=================================================================================
+var only			     let/const			     ✅ Block scope
+Callback hell			Promises			     ✅ Cleaner async
+Function expressions	Arrow functions	     ✅ Shorter, lexical this
+String concatenation	Template literals		✅ Readable strings
+No classes			class syntax			✅ OOP patterns
+No modules			import/export			✅ Code organization
+==================================================================================
+
+
+
+==================================================
+
+LET – Behaviour Notes
+==================================================
+
+Definition
+Used to declare a block-scoped variable.
+
+Scope Behaviour
+• Block-scoped ({ })
+• Accessible only within the block where declared
+• Not accessible outside the block
+
+Example Structure
+
+let variableName = value;
+
+Key Characteristics
+• Can be reassigned
+• Cannot be redeclared in the same scope
+• Best used when value will change
+
+Reassignment Behaviour
+• Allowed
+• Useful for counters and dynamic values
+
+Redeclaration Behaviour
+• Not allowed in the same scope
+• Prevents accidental duplicate declarations
+
+Temporal Dead Zone (TDZ)
+• Cannot access before declaration
+• Causes ReferenceError
+
+Use Cases
+• Loop counters
+• Conditional updates
+• Dynamic data handling
+
+==================================================
+2) CONST – Behaviour Notes
+
+Definition
+Used to declare a block-scoped constant variable.
+
+Scope Behaviour
+• Block-scoped ({ })
+• Accessible only within declared block
+
+Example Structure
+
+const variableName = value;
+
+Key Characteristics
+• Must be initialized at declaration
+• Cannot be reassigned
+• Cannot be redeclared in same scope
+
+Reassignment Behaviour
+• Not allowed
+• Causes TypeError if attempted
+
+
+Use Cases
+• Configuration values
+• Fixed references
+• Constants
+• API endpoints
+• Base URLs
+---------------------------------------------------------------------
+Arithmetic Operators :
+
+ Arithmetic operators are used in mathematical expressions in the same way that they are used in algebra. The following table lists the arithmetic operators:
+ Operator     Result
+ + 		Addition (also unary plus)
+ -		Subtraction (also unary minus)
+ * 		Multiplication
+ / 		Division
+ % 		Modulus- REMAINDER
+
+ -----------------------------------------
+ ++ 		Increment
+ += 		Addition assignment
+ -= 		Subtraction assignment
+ *= 		Multiplication assignment
+ /= 		Division assignment
+ %= 		Modulus assignment
+ -- 		Decrement
+
+ex :    str += temp+ " "  ( Loops/accumulation )
+
+-----------------------------------------
+Relational Operators :
+
+ The relational operators determine the relationship that one operand has to the other. 
+Specifically, they determine equality and ordering. The relational operators are shown here:
+ Operator		Result
+ ==			Equal to
+ !=			Not equal to
+ >			Greater than
+ <			Less than
+ >=			Greater than or equal to
+ <=			Less than or equal to
+  
+ The outcome of these operations is a boolean value. The relational operators are most frequently used in the expressions that control the if statement and the various loop statements.
+
+Here, condition is a Boolean expression. If condition is true, then the statement is executed. 
+If condition is false, then the statement is bypassed
+
+
+The Bitwise Operators :
+
+ Operator   	    Result
+ !	     	Bitwise unary NOT
+ &		     Bitwise AND
+ |		     Bitwise OR
+ 
+ -----------------------------------------
