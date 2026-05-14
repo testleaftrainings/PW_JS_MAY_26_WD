@@ -1,0 +1,231 @@
+📑 Agenda – Day 03 | Looping_&_String
+
+⏱ Total Duration: 2 Hours
+----------------------------------------------------------------------------
+| 	Time	    |                    Session                      | Duration |
+|-------------------|------------------------------------------|----------|
+| 7:00 PM – 8:00 PM | Control Statement (Condition)	         | 60 mins |
+| 8:00 PM – 8:05 PM | ☕ Break		                             | 05 mins |
+| 8:05 PM – 8:45 PM | Iteration Statements            	      | 40 mins |
+| 8:45 PM – 9:00 PM | 💻 Breakout Session (Hands-on)           | 15 mins |
+----------------------------------------------------------------------------
+
+---------------------------------------------------------------------
+Arithmetic Operators :
+
+ Arithmetic operators are used in mathematical expressions in the same way that they are used in algebra. The following table lists the arithmetic operators:
+ Operator     Result
+ + 		Addition (also unary plus)
+ -		Subtraction (also unary minus)
+ * 		Multiplication
+ / 		Division
+ % 		Modulus- REMAINDER
+
+ -----------------------------------------
+ compound assignment operators
+
+ ++ 		Increment
+ += 		Addition assignment
+ -= 		Subtraction assignment
+ *= 		Multiplication assignment
+ /= 		Division assignment
+ %= 		Modulus assignment
+ -- 		Decrement
+
+ex :    str += temp+ " "  ( Loops/accumulation )
+
+ -----------------------------------------
+Relational Operators :
+
+ The relational operators determine the relationship that one operand has to the other. 
+Specifically, they determine equality and ordering. The relational operators are shown here:
+ Operator		Result
+ ==			Equal to
+ !=			Not equal to
+ >			Greater than
+ <			Less than
+ >=			Greater than or equal to
+ <=			Less than or equal to
+  
+ The outcome of these operations is a boolean value. The relational operators are most frequently used in the expressions that control the if statement and the various loop statements.
+
+Here, condition is a Boolean expression. If condition is true, then the statement is executed. 
+If condition is false, then the statement is bypassed
+
+
+The Bitwise Operators :
+
+ Operator   	    Result
+ !	     	   Bitwise unary NOT
+ &		      Bitwise AND
+ |		      Bitwise OR
+ 
+ 
+
+=============================================================================
+Topic: Conditional Statements (JavaScript)
+
+==================================================
+
+IF STATEMENT – Behaviour Notes
+==================================================
+
+Definition
+Used to evaluate logical conditions (true / false).
+
+Execution Behaviour
+• Evaluates condition expression
+• Executes block only if condition is true
+• Supports relational and logical operators
+• Multiple conditions supported
+• Executes top-to-bottom
+
+Key Characteristics
+• Can evaluate complex expressions
+• Best suited for range-based conditions
+• Uses >, <, >=, <=, &&, ||
+• Stops after first true condition
+• Flexible and dynamic
+
+Example Use Cases
+• Marks grading system
+• Age validation
+• Tax slab calculation
+• Form validation logic
+
+
+==================================================
+2) SWITCH STATEMENT – Behaviour Notes
+
+Definition
+Used for exact value matching.
+
+Execution Behaviour
+• Evaluates expression once
+• Compares using strict equality (===)
+• Matches only exact values
+• Executes matching case block
+• Requires break to stop fall-through
+
+Structure :
+switch (expression) {
+   case value1:
+      // executes if expression === value1
+      break;
+   case value2:
+      break;
+   default:
+      // executes if no match
+}
+
+-----------------------------------------------------------
+-----------------------------------------------------------
+
+Topic: Iteration Statements (JavaScript)
+Focus: for, while, do...while
+
+==================================================
+
+FOR LOOP – Behaviour Notes
+==================================================
+
+Definition
+Used when the number of iterations is known or count-controlled.
+
+Execution Behaviour
+• Executes in three parts: initialization → condition → increment/decrement
+• Condition is checked before each iteration
+• Stops when condition becomes false
+• Suitable for counter-based repetition
+
+Structure
+
+for (initialization; condition; increment) {
+   // repeated block
+}
+
+Flow Order
+
+Initialization runs once
+Condition checked
+Block executes if true
+Increment runs
+Condition rechecked
+
+Key Characteristics
+• Best for fixed iteration count
+• Loop variable usually declared inside
+• Clear and compact structure
+• Risk of infinite loop if condition never becomes false
+
+Use Cases
+• Iterating arrays
+• Number-based loops
+• Index-controlled logic
+
+==================================================
+2) WHILE LOOP – Behaviour Notes
+
+Definition
+Used when number of iterations is unknown and depends on condition.
+
+Execution Behaviour
+• Condition checked first
+• Executes only if condition is true
+• May execute zero times
+
+Structure
+
+while (condition) {
+   // repeated block
+}
+
+Flow Order
+
+Condition checked
+If true → block executes
+After execution → condition rechecked
+
+Key Characteristics
+• Entry-controlled loop
+• Best for dynamic conditions
+• Must manually control increment inside block
+• High risk of infinite loop if update missing
+
+Use Cases
+• Waiting for user input
+• Polling mechanism
+• Conditional repetition
+
+==================================================
+3) DO...WHILE LOOP – Behaviour Notes
+
+Definition
+Executes block at least once, regardless of condition.
+
+Execution Behaviour
+• Block executes first
+• Condition checked after execution
+• Continues if condition is true
+
+Structure
+
+do {
+   // repeated block
+} while (condition);
+
+Flow Order
+
+Block executes
+Condition checked
+If true → repeat
+
+Key Characteristics
+• Exit-controlled loop
+• Guaranteed minimum one execution
+• Useful for validation scenarios
+
+Use Cases
+• Menu-driven programs
+• Input validation
+• Retry mechanisms
