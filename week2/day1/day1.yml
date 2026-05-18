@@ -1,0 +1,167 @@
+Week2.day1 
+
+🔁 For Loop 
+🧩 Breakout Session 
+⛔ Break 
+🔤 Strings 
+
+
+
+
+Looping Statements:
+
+for Statement: The for loop in JavaScript is used to iterate over a range 
+of values or to 
+repeat a block of code a certain number of times. It consists of three parts: 
+initialization, condition, and iteration expression. The loop continues as long as 
+the condition is true.
+
+
+Initialization – Executed once before the loop starts.
+
+Condition – Checked before every iteration; loop runs as long as it's true.
+
+Update – Executed after each loop iteration.
+
+Example:
+
+for(initialization;condition;iteration){
+
+}
+iteration:
+i++ -> post increment => i+1
+++i -> pre increment  => 1+i
+
+let num=10
+
+for(let i=0;i<=num;i++){
+console.log(i)
+}
+i=0;0<=10;0+1
+i=1;1<=10;1+1
+.
+.
+.
+.
+.
+.
+i=10;10<=10;10+1
+i=11;11<=10 -> stop execution
+
+output
+0
+1
+
+
+
+
+10 
+         Jump Statements:
+
+break Statement: The break statement is used to exit a loop prematurely. When encountered inside a loop,
+ it immediately terminates the loop, and the control is transferred to the statement following the loop.
+
+ for (let i = 0; i < 10; i++) {
+  //0,1,2,3,4,5
+    if (i == 5) {
+        break; // Exits the loop when i is 5
+    }
+    console.log(i)
+}
+
+
+continue Statement: The continue statement is used to skip the rest of the code inside a loop for 
+the current iteration and move on to the next iteration.
+
+for (let i = 0; i < 10; i++) {
+    if (i == 5) {
+        continue; // Skips the rest of the code for i=5 and continues with the next iteration
+    }
+    // Code inside the loop
+}
+//0,1,2,3,4,6,7,8,9
+
+
+For loop
+
+ClassRoom: 1
+Input -> 30
+print Odd number 0 to 30
+use for loop
+use if condition
+print Value
+
+
+Input -> 25
+print Odd number  & Even number 0 to 25
+use for loop
+use if condition & else
+print Value
+
+
+
+
+String:
+
+* its collection of Characters
+declare 2 types
+
+Type 1:-
+String Literal // store the value in String constant pool memory its part 
+heap memory
+let empname="Dilip" // 301
+let val="Dilip" //it will not assign to new memory
+
+Type 2:
+String Object // directly it store value inside heap memory 
+let comName= new String("Testleaf") //202
+let name1=new String("TestLeaf") //302
+
+Declaring a String:
+Single quotes -> '   '
+Double quotes -> "  "
+BackTicks ->  ` `
+
+
+Methods
+1.length -> find total chars is present 
+2.chatAt -> print index based char
+3.lowercase and uppercase -> 
+4.split() -> split value it can be word or char
+-> delimiter the value which we can given 
+
+let cName="Java"
+console.log(cName.length)
+
+String index value start from '0'
+[0]->J
+[1]->a
+[2]->v
+[3]->a
+
+console.log(cName.charAt(2))
+
+expe- > testleaf
+rec -> TestLeaf.lowercase -> testleaf
+v.touppercase -> TESTLEAF
+
+let c="Playwright Automation Project"
+c.split("a")
+
+# Playwright
+# Automation
+# Project
+Pl
+ywright Autom
+tion Project
+
+H/A
+Step 1: Store the Name
+Step 2: Split the String
+Step 3: Reverse Using i--
+Step 4: Print value 
+p
+i
+l
+i
+d
