@@ -1,0 +1,100 @@
+📘 Week 2 – Day 3 Agenda
+
+⏰ 07:00 – 07:30 → Arrays
+⏰ 07:30 – 07:45 → Breakout Session
+⏰ 07:45 – 08:15 → Functions
+⏰ 08:15 – 08:25 → Break
+⏰ 08:25 – 09:00 → Callback Functions
+
+
+let data=[12,56,78,'js',true,,null]
+pop()
+push(name)
+unshift(false)
+shift()
+splice(2,3,'','','')
+
+
+
+
+1. PrintDuplicate [56,78,90,23,90,76,43,56]
+2.data ["chrome",true,132.8]
+add index 5 -> webkit
+pop->
+use push -> firefox
+use shift ->
+
+
+
+Functions:
+1.Named Function or Regular Function
+2.Arrow Function
+3.Call-Back Function
+
+Named Function:
+A function is a reusable block of code
+
+function session(){
+console.log("name")
+}
+
+function fill(url){
+return url
+}
+
+function send(url){
+console.log(url)
+}
+
+//call the function
+session()
+fill("https://www.google.com")
+console.log(fill("https://www.google.com"))
+
+send("il")
+
+=================================================
+Arrow function:
+const variable =(input) => input
+syntax"
+arrow function ()=>
+
+const add=()=>{console.log("hi")}
+const data=(stName,stId)=>{ stName +" "+ stId}
+console.log(data("dinesh",89))
+
+=====================================================
+Anonymous function :
+
+setTimeout(function(){
+    console.log("HI")
+},10000)
+
+
+
+
+
+
+
+Callback function:
+callback -> call one function to another function 
+agrs -> callback -> user define
+
+function a(name,b){ //function a("dilip",b)
+console.log(name)
+b(30) //b(30)
+}
+
+function b(age){
+console.log(age)
+}
+
+a("dilip",b)
+
+
+//order -> order food ==>preparing ==> pickup
+orderfood()
+preparing()
+pickup()
+
+oderfood()
