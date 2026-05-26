@@ -1,0 +1,142 @@
+week3.day1
+
+ -> Browser Launch
+ -> Page Fixture
+ -> Breakout 
+ -> Break
+ -> DOM Structure
+ 
+ 
+
+Playwright:
+under tests folder
+FileName.spec.ts
+
+execute from Root folder
+
+npm init playwright@latest 
+choose typescript
+
+
+
+Page fixture:
+common line of code -> browser,context and page
+
+
+test("Page fixture",async({page})=>{
+
+await page.goto("")
+
+})
+
+
+
+ClassRoom 1:
+1.Launch the browser,context and page
+2. Navigate to the URL
+
+classroom 2:
+1.use with page fixture
+
+use: {
+    headless:false,
+  },
+
+npm init playwright@latest
+filename.spec.ts
+npx playwright test filename.spec.ts
+
+
+
+DOM -->Document Object Model /developer /Html design -->
+find information elements
+
+-->root tag ...
+-->tags 
+-->link based
+-->paragragh 
+-->dropdown element
+
+--> tabular stucture -->icon -->end of the page
+Text -->linktext
+
+Ways to Open DOM:
+1. right click on the application and click on inspect
+2. press f12 or fn + f12
+3. press ctrl + shift + i => browser click on 3 idot -> more tools -> developer tool
+
+
+Locators
+1. CSS Locators
+2. XPath
+3. Playwright inbuilt locators
+
+css:
+Basic Loactor:
+1.id
+2.class
+3.name
+4.text
+
+<input class="inputLogin" type="text" id="username" name="USERNAME" size="50">
+
+<label for="username">Username</label>
+
+tag name-> input, label
+
+class,type,id,name,size -> attributeName
+
+"inputLogin","text","username","USERNAME" -> attributeValue
+
+black color text-Username -> text
+
+id-unique value
+name - name of the attribute
+class -
+
+<input class="inputLogin" type="text" id="username" name="USERNAME" size="50">
+
+
+CSS : Cascading Style sheets
+id attribute
+1. #attributeValue -> #username
+2. [id='username']
+3. tagname[attributeName='attributeValue'] -> input[id='username']
+
+name attribute:
+1. [attributeName='attributeValue']-> [name='USERNAME']
+2. tagname[attributeName='attributeValue'] -> input[name='USERNAME']
+
+class attribute:
+1. .attributeValue -> .decorativeSubmit
+2. [class='decorativeSubmit']
+3. tagname[attributeName='attributeValue'] -> input[class='decorativeSubmit']
+
+.input r4 wide mb16 mt8 username -> it wll not work
+.input.r4.wide.mb16.mt8.username -> it will work
+
+.nav-input nav-progressive-attribute
+.nav-input.nav-progressive-attribute
+
+text value: link-> <a href=''>textvalue</a>
+text='textvalue' -> `text='CRM/SFA'`
+
+
+-> .first() -> it will select the first element
+-> .last() -> it will select the last element
+-> nth() -> it will select the nth element
+
+(.inputLogin).first() -> username
+(.inputLogin).last() -> password
+(.inputLogin).nth(3) -> it will select the 4th element because
+index value start with 0
+
+
+Classroom 1:
+load this https://leaftaps.com/opentaps/control/main
+username: democsr
+password: crmsfa
+click on login button
+click on crm/sfa link
+`text='CRM/SFA'`
+Get the title of the page
