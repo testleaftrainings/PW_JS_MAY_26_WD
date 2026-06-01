@@ -1,0 +1,49 @@
+week4.day1
+-> Xpath
+-> Assertions
+-> Break
+-> Playwright Native Locators
+
+
+
+Playwright Assertions:
+
+default time -> 5sec
+
+Types:
+1.Auto Retry -Soft,hard
+2.Non-Retry -Soft,hard
+3.soft
+4.hard
+
+Assertions tpes:
+Generic Type- toEqual, toHaveTitle
+Locator Type -tobeEnabled
+page type - toHaveURL
+API Assertions
+Negating Assertions
+expect().not.
+
+
+
+
+
+Playwright getBy Locators: Playwright provides a set of getBy methods to locate elements in the DOM, which can be more expressive and powerful compared to traditional CSS selectors. These methods are used to interact with web elements in a more human-readable way.
+
+Commonly Used getBy Locators getByText: Selects elements containing specific text. 
+Example: page.getByText('Submit') selects an element with the text "Submit".
+
+1.page.getByText('Leads').click()
+
+getByRole: Selects elements based on their ARIA roles. Example: page.getByRole('button', { name: 'Login' }) selects a button element with the accessible name "Login".
+
+page.getByRole('input',{name:'companyName'})
+
+getByLabel: Selects form elements associated with a specific label. Example: page.getByLabel('Username') selects the input field associated with the label "Username".
+
+getByPlaceholder: Selects input elements based on their placeholder attribute. Example: page.getByPlaceholder('Enter your password') selects an input field with the placeholder "Enter your password".
+
+getByAltText: Selects images and other elements with an alt attribute. Example: page.getByAltText('Product image') selects an image with the alt text "Product image".
+
+
+https://parabank.parasoft.com/parabank/index.htm
