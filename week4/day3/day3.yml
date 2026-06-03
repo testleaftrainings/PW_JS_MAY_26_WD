@@ -1,0 +1,95 @@
+week4.day3
+
+
+
+What is an Alert?
+
+An Alert is a browser popup message displayed to the user to provide information, 
+warnings, confirmations, or to collect input.
+
+Common Uses
+Error messages
+Warning messages
+Confirmation messages
+User input requests
+
+Important: Browser alerts block user interaction with the page until they are handled.
+ Playwright cannot ignore alerts; they must be accepted or dismissed.
+
+Model Alert & Non-Model Alert
+Model alert we cannot interact with the page until we handle the alert.
+Non-Model alert we can interact with the page even if the alert is present.
+
+
+In palywright - deafult behavior is to automatically dismiss alerts
+1. Simple Alert
+A simple alert displays a message and provides only one action.
+
+Actions Available
+OK
+
+2. Confirmation Alert
+A confirmation alert asks the user to confirm an action.
+
+Actions Available
+OK
+Cance
+
+3. Prompt Alert
+
+A prompt alert allows the user to enter text.
+
+Actions Available
+Enter Text
+OK
+Cancel
+
+
+
+Method	-Description
+dialog.message()-	Returns alert text
+dialog.type()-	Returns alert type
+dialog.accept()-	Clicks OK
+dialog.accept('text')-	Enters text and clicks OK
+dialog.dismiss()-	Clicks Cancel
+
+
+page.on() vs page.once()
+
+
+page.on()	                       page.once()
+Handles every alert occurrence	Handles only the first alert
+Event listener remains active	  Automatically removed after execution
+Useful for multiple alerts	    Useful for a single alert
+
+Default Behavior of Playwright with Alerts -> auto dismiss
+
+
+https://www.leafground.com/alert.xhtml
+Auto Dismiss 
+-> Promot alert -> click show button
+
+page.once
+-> simple alert - accpet
+-> promot alert - 
+
+page.on (if-if else)
+-> simple alert - accept
+-> confirmation alert -> dismiss
+-> promot alert -> accept with text
+
+
+page.on('dialog',alertType=>{
+    const type=alertType.type()
+    console.log(type)
+
+    const msg=alertType.message()
+    console.log(msg)
+
+    //if(msg.contain("Did you"){alertType.accept()}else{alertType.dismiss()})
+
+    if(type==="confirm"){
+    alertType.dismiss()
+    }else if(type==="prompt"){
+    alertType.accept("Playwright")
+}
