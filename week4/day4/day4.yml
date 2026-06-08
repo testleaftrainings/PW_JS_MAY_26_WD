@@ -1,0 +1,51 @@
+Frame Handling in Playwright
+
+
+What is a Frame?
+
+A Frame (iframe) is an HTML document embedded inside another HTML document.
+
+Example:
+
+<iframe src="https://example.com"></iframe>
+
+Frames are commonly used for:
+
+Payment gateways
+Advertisements
+Chat widgets
+Embedded videos
+Third-party applications
+Why Frame Handling is Required?
+
+Playwright cannot directly interact with elements inside an iframe.
+
+❌ This will fail:
+
+await page.locator("#username").fill("Dilip");
+
+Because the element is inside a frame.
+
+You must switch to the frame first.
+
+Methods to Handle Frames in Playwright
+1. frameLocator() (Recommended)
+
+Most commonly used method.
+
+await page.frameLocator("iframe")
+          .locator("#username")
+          .fill("Dilip");
+Advantages
+Auto waits
+Easy to write
+Recommended by Playwright team
+
+3 ways to handle iFrame:
+-> index based -> await frameValue[1].locator("#Click").click()
+-> FrameLocator -> await page.frameLocator("(//iframe)[1]").locator("#Click").click()
+-> FrameObject -> await page.frame({name:'frame2'})?.locator("#Click").click()
+
+-> 2 types of Frame
+1. single Frame
+2. Nested Frame -> frame inside another frame
