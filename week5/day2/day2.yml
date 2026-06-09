@@ -1,0 +1,59 @@
+week5.day2
+
+-> File Upload 
+-> File Download
+-> Breakout
+-> Break
+-> Storage state
+-> Breakout
+
+
+-> File Upload 
+-word,pdf,ppt,xlsx
+-> 2 types we can upload the File
+
+--> Tag name should be <input> and attribute is type=File
+.setInputFile()
+
+--> Event Listener 
+event ->(filechooser)
+.setFile()
+
+
+-> Download File
+
+--> Event Listener
+event -> ("download")
+.saveAs()
+
+
+Class roon:
+https://www.naukri.com/registration/createAccount
+click on I'm experienced
+upload the file
+setInputFiles()
+
+
+
+Storage state: login -> convert into Json file
+json file -> key and value pair
+150 TC -> Login function(15 to 20 sec)
+20*150 -> 3000s
+
+Skip the Login
+->Home Page
+http://leaftaps.com/crmsfa/control/main
+
+use -> Stoarge json.file(democsr, crmsfa) (demosalesmanager,crmsfa)
+await page.goto("https://leaftaps.com/crmsfa/control/main")
+
+spec.ts -> url,username,password,login,crmsfa
+storage-> json file
+
+lead.spec.ts-> use storage value
+await page.goto("https://leaftaps.com/crmsfa/control/main")
+
+
+
+
+
