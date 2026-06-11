@@ -1,0 +1,96 @@
+week5.day4
+
+-> test.describe
+-> Break
+-> Data Parameterization(JSON)
+-> Breakout
+
+test.describe->
+serial -> depending on the test ->  any one test is failed -> it will stop execution
+squential(default) -> execute test one by one
+parallel -> any test failed , other test will execute
+
+//test.describe -> group of test cases
+
+//test.describe.serial -> to run the test cases in serial manner -> if any one test is failed . it will
+//stop the execution of next test cases (depends-on)
+
+//test.describe.parallel -> to run the test cases in parallel manner -> if any one test is failed . it will
+//not stop the execution of next test cases
+
+//test.describe.squential(default) -> to run the test cases in sequential manner -> if any one test is failed . it will 
+//not stop the execution of next test cases
+
+
+
+
+Json -->javascript object notation
+
+ key : value
+
+ key => tcName,Username,Password
+ value => Tc001,Demosalesmanager,crmsfa
+
+key
+ cN
+ fN
+ lN
+
+value
+testleaf
+dilip
+kumar
+
+single Set of data: {}
+{
+"tcName":"TC001"
+"UserName":"Demosalesmanager"
+"Password":"crmsfa"
+}
+
+
+Multiple set of data: [{},{}]
+[ {
+  key :  value
+"TestID":"Tc001"
+"username":"Democsr"
+"password":"crmsfa"
+
+},
+
+{
+key :  value
+"TestID":"Tc002"
+"username":"Democsr"
+"password":"crmsfa"
+}]
+    key value pair
+
+
+import loginInfo from '../../constants/login.json'
+
+test(`Read json data`,async()=>{
+for(let login of loginInfo){
+    console.log(login.Username)
+}
+})
+
+
+steps:
+-> create folder as utils -> create json file 
+-> pass values in json file
+-> Create Test 
+
+
+
+
+
+Classroom:
+Login With SalesForce application
+Load the url  :https://login.salesforce.com/?locale=in
+Enter username 
+Enter password
+click on Login
+
+Username : dilip@testleaf.com,dilipkumar.rajendran@testleaf.com
+password: Leaf@123 , TestLeaf@2025

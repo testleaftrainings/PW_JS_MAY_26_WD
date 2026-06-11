@@ -1,0 +1,44 @@
+import test, { expect } from '@playwright/test'
+
+test.describe("Smoke testing Testcase",async()=>{
+
+    test.describe.configure({mode:'serial',retries:1})
+
+
+test("Test 1",async({page})=>{
+    await page.goto("https://www.leafground.com/input.xhtml")
+            const title=await page.title()
+            console.log(title)
+             expect(title).toBe("Input Components")
+})
+
+
+
+test("Test 1.0",async({page})=>{
+    await page.goto("https://www.leafground.com/input.xhtml")
+            const title=await page.title()
+            console.log(title)
+             expect(title).toBe("Input components")
+})
+
+
+test("test 2",async({page})=>{
+await page.goto("https://www.leafground.com/file.xhtml")
+await page.locator("//input[@type='file']").nth(1).setInputFiles(['TestData/TestLeaf Logo.png','TestData/TestLeaf Logo (4).png'])
+await page.waitForTimeout(2000)
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+    
+})
