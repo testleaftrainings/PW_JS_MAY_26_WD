@@ -1,0 +1,73 @@
+week6.day1
+
+-> CSV file
+-> Break
+-> ENV file
+-> Breakout
+
+
+
+csv -comma separated values
+TestCaseID,Username,password,enterName,enterPhone
+Tc001,dilip@testleaf.com,Leaf@123
+Tc002,ravi@testleaf.com,Sales@123
+
+
+step:1 --> install csv-parse
+ npm install csv-parse
+
+step:2 --> use parse() --> imported from csv-parse/sync
+parse(pathofthefile)
+
+step:3 -->install fs (file system)
+npm install fs
+
+Each row will be considered as one test 
+2 tests -->unique desc of the test
+
+
+const a:any[]=parse(fs.readFileSync("Data/SalesForce.csv"),{columns:true})
+
+columns-->true -->read first row as header
+
+to read single data
+
+for(){
+// Learn to read CSV values -> Tc001
+// Learn to read CSV values -> Tc002
+}
+
+test(`Learn to read CSV values ${loginCredentials[0].TestCaseId}`, async ({page}) => {
+    await page.goto("http://leaftaps.com/opentaps/control/login")
+    await page.locator("#username").fill(loginCredentials[0].Username)
+    await page.fill("#password",loginCredentials[0].Pasword)
+    await page.click(".decorativeSubmit") 
+    })
+----------------------------------------------------------------------------
+
+
+
+env -->environment file
+-->db ,api token, crendetials -->qa, prod, api
+
+to read data from env file
+
+step:1  -->install dotenv
+npm install dotenv
+
+step:2 --> prod.env
+dotenv.config({path:`constants/prod.env`})
+
+Multiple file to read
+const fileTORead=process.env.envFile
+dotenv.config({path:`constants/${fileTORead}.env`})
+
+set the filename
+$env:envFile="staging"
+$env:envFile="QA"
+
+unset
+$env:envFile=""
+
+to know which file is set for execution
+$env:envFile
