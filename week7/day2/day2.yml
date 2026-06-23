@@ -1,0 +1,56 @@
+Playwright with API
+
+Doc
+Endpoint
+Auth/token
+Headers
+Request body
+Response body
+Status
+
+
+
+-> Playwright inbuild fixture
+-> request fixture
+-> page fixture-> launch browser,context,page
+await.page.goto()
+
+Rquest Fixture:
+-> Launch browser
+-> context API
+
+
+What is Request Fixture in Playwright?
+
+The Request Fixture (request) in Playwright is used to perform API testing 
+without opening a browser.
+
+It provides an instance of APIRequestContext that allows you to send HTTP 
+requests such as:
+
+GET
+POST
+PUT
+PATCH
+DELETE
+
+This is useful for:
+
+API Testing
+Creating test data before UI tests
+Deleting test data after tests
+Verifying backend responses
+Hybrid UI + API automation
+
+
+Common Methods
+Method	Usage
+request.get()	Retrieve data
+request.post()	Create data
+request.put()	Update entire resource
+request.patch()	Partial update
+request.delete()	Delete resource
+response.json()	Get response body as JSON
+response.text()	Get response as text
+response.status()	Get status code
+response.ok()	Check success response
