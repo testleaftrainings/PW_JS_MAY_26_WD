@@ -1,0 +1,141 @@
+Day1
+
+-> Inheritance
+-> BreakoutSession
+-> Polymorphsim
+
+
+
+
+
+oops with typescript
+
+Object-Oriented Programming (OOPS) is a programming paradigm that organizes code 
+using classes and objects instead of only functions.
+
+In Playwright automation, OOPS helps us design frameworks that are:
+
+* Modular
+* Reusable
+* Maintainable
+* Scalable
+
+Instead of writing automation code in one file, 
+we divide responsibilities into logical classes such as 
+Page Objects, utilities, and test classes.
+
+
+OOPs: 
+
+Inheritance:
+its a relationship between two class
+parent class and child class
+
+types:
+Single Inheritance :  parent -> child
+Multilevel Inheritance : GrandParent -> parent -> child
+Hierarchical Inheritance : browser -> chrome ,browser -> edge , browser->firefox 
+
+ts -> it will  not support mulitple Inheritance -> PA&PB -> PC
+
+keyword: extends
+child extends parent  -> work
+
+parent extends child ->this will not work
+
+
+ClassRoom 1:
+Parent file
+ Create class Browser
+ Create 2 methods browserType,browserVersion
+
+1st Child file
+Create class Chrome 
+Create 1 method launchBrowser
+create object for Chrome
+
+2nd Child file
+Create class Edge
+Create 1 method launchBrowser
+create object for Edge
+
+-> extends, export and import
+
+
+classroom 2:
+create class Locator
+public css() -> c.l()
+
+create class Xpath -> Locator
+basicXpath()
+advanceXpath()
+
+create class PlaywrightLocators -> Locator
+getByText()
+getByRole()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Polymorphsim:
+-> Poly morphsim
+-> many forms
+
+2 types Polymorphsim:
+
+1.Method overloading -> Complie poly
+2.Method overriding -> Run poly
+
+Method overloading:
+Inside the same class we can create multiple method with same Method name,but 
+different paramters should be passed
+
+class Base{
+
+Elementclick(locator:string):void -> click()
+Elementclick(locator:string,forceClick:string):void
+
+Elementclick(locator:string){
+
+}
+
+Elementclick(locator:string,forceClick:string){
+
+}
+
+Elementclick(locator:string,forceClick?:string){
+}
+
+
+Method overriding:
+use Method overriding -> Inheritance
+connect between two different class with same method signature and paramters only 
+implemenation can change
+
+export class parent{
+
+phone(){
+console.log(iphone 15)
+}
+}
+//object-> iphone 15
+
+class child extends parent{
+
+phone(){
+console.log(iphone 16 pro)
+}
+}
+//object-> iphone 16 pro
