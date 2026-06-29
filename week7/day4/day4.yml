@@ -1,0 +1,96 @@
+-> 
+🎯 [Focus: Mastering Object-Oriented Programming Concepts in TypeScript]
+
+
+1. Class & Objects
+
+Understanding the basics of classes and objects in TypeScript.
+Examples: Creating and using classes and objects.
+
+2. Constructors
+
+Role of constructors in initializing objects.
+Examples: Using parameterized and default constructors.
+
+Classroom Activity on class, porperties, methods and constructor.
+
+3. Access Modifiers 
+
+Understanding public, private, and protected access modifiers.
+Examples: Controlling access to class properties and methods.
+
+
+
+
+
+Class and Object:
+
+
+Real life example of Class and Object, Properties and Methods:
+
+###  What is a *Class*?
+
+A *class* is like a *blueprint* or *template* for creating something.
+
+Example with application login :
+-----------------------------------
+
+property :
+---------
+Represents the information or data related to a particular page or object
+(e.g., username, password, URL).
+
+method :
+-------- 
+Represents the actions or operations performed on that page or object
+(e.g., fill a field, click a button, submit a form).
+
+
+
+Constructor:
+
+Definition
+A constructor in TypeScript is a method named constructor() that runs once 
+at the time of object creation and sets up the initial state of the object.
+Or a Special method to initialize the object
+
+1.Default constructor
+2.Parameterizted constructor
+
+constructor()
+constructor(name:string)
+
+
+
+
+
+| Function        | Method                   |
+| --------------- | ------------------------ |
+| Independent     | Attached to object/class |
+| Called directly | Called using object      |
+| `add()`         | `page.click()`           |
+| General utility | Object behavior          |
+
+Classroom:
+class as Browser
+property -> url,username,companyName
+method -> loadUrl,close
+constructor(companyName)
+Create object 
+
+create new file export & import
+call object 
+call method
+
+
+
+
+AccessModifiers:
+
+1. public : can be accessed inside and outside of the class
+2. protected: can be accessed inside the class as well as the related class 
+--> relationship--> inherit
+3. private: not accessible outisde the class --> give permission to access or to rewrite "get" and "set"
+4. readonly: constant/final --> cannot change the assigned value
+5. static: belongs to the class and not to the object --> can be accessed 
+without creating the object of the class.
